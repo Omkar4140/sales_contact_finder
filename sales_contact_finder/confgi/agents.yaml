@@ -9,7 +9,7 @@ company_researcher:
     config:
       api_key: ${OPENROUTER_API_KEY}
       model: mistralai/mistral-7b-instruct:free
-      max_tokens: 700
+      max_tokens: 600
       temperature: 0.3
 
 org_structure_analyst:
@@ -23,7 +23,7 @@ org_structure_analyst:
     config:
       api_key: ${OPENROUTER_API_KEY}
       model: mistralai/mistral-7b-instruct:free
-      max_tokens: 700
+      max_tokens: 600
       temperature: 0.3
 
 contact_finder:
@@ -37,7 +37,7 @@ contact_finder:
     config:
       api_key: ${OPENROUTER_API_KEY}
       model: mistralai/mistral-7b-instruct:free
-      max_tokens: 700
+      max_tokens: 600
       temperature: 0.3
 
 sales_strategist:
@@ -50,5 +50,5 @@ sales_strategist:
     config:
       api_key: ${OPENROUTER_API_KEY}
       model: mistralai/mistral-7b-instruct:free
-      max_tokens: 700
+      max_tokens: 600
       temperature: 0.3
