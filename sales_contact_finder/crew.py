@@ -8,7 +8,6 @@ from crewai.project import CrewBase, agent, crew, task
     tasks_config_path="config/tasks.yaml"
 )
 
-@CrewBase
 class SalesContactFinderCrew:
 
     @agent
