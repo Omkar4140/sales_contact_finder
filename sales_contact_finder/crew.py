@@ -1,4 +1,4 @@
-from crewai_tools import ScrapeWebsiteTool, SerperDevTool
+from crewai_tools import SerperDevTool
 
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
@@ -15,7 +15,7 @@ class SalesContactFinderCrew:
     def company_researcher(self) -> Agent:
         return Agent(
             config=self.agents_config["company_researcher"],
-            tools=[SerperDevTool(), ScrapeWebsiteTool()],
+            tools=[SerperDevTool()],
             allow_delegation=False,
             verbose=True,
         )
@@ -24,7 +24,7 @@ class SalesContactFinderCrew:
     def org_structure_analyst(self) -> Agent:
         return Agent(
             config=self.agents_config["org_structure_analyst"],
-            tools=[SerperDevTool(), ScrapeWebsiteTool()],
+            tools=[SerperDevTool()],
             allow_delegation=False,
             verbose=True,
         )
@@ -33,7 +33,7 @@ class SalesContactFinderCrew:
     def contact_finder(self) -> Agent:
         return Agent(
             config=self.agents_config["contact_finder"],
-            tools=[SerperDevTool(), ScrapeWebsiteTool()],
+            tools=[SerperDevTool()],
             allow_delegation=False,
             verbose=True,
         )
@@ -84,5 +84,5 @@ class SalesContactFinderCrew:
             tasks=self.tasks,  # Automatically created by the @task decorator
             process=Process.sequential,
             verbose=True,
-            # process=Process.hierarchical, # In case you wanna use that instead https://docs.crewai.com/how-to/Hierarchical/
+            
         )
