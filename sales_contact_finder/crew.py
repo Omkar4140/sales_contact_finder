@@ -50,28 +50,28 @@ class SalesContactFinderCrew:
     @task
     def research_company_task(self) -> Task:
         return Task(
-            config=self.tasks_config["research_company_task"],
+            config="research_company_task",
             agent=self.company_researcher(),
         )
 
     @task
     def analyze_org_structure_task(self) -> Task:
         return Task(
-            config=self.tasks_config["analyze_org_structure_task"],
+            config="analyze_org_structure_task",
             agent=self.org_structure_analyst(),
         )
 
     @task
     def find_key_contacts_task(self) -> Task:
         return Task(
-            config=self.tasks_config["find_key_contacts_task"],
+            config="find_key_contacts_task",
             agent=self.contact_finder(),
         )
 
     @task
     def develop_approach_strategy_task(self) -> Task:
         return Task(
-            config=self.tasks_config["develop_approach_strategy_task"],
+            config="develop_approach_strategy_task",
             agent=self.sales_strategist(),
             output_file="buyer_contact.md",
         )
