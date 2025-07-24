@@ -14,7 +14,7 @@ class SalesContactFinderCrew:
     @agent
     def company_researcher(self) -> Agent:
         return Agent(
-            config=self.agents_config["company_researcher"],
+            config="company_researcher",
             tools=[],
             allow_delegation=False,
             verbose=True,
@@ -23,7 +23,7 @@ class SalesContactFinderCrew:
     @agent
     def org_structure_analyst(self) -> Agent:
         return Agent(
-            config=self.agents_config["org_structure_analyst"],
+            config="org_structure_analyst",
             tools=[],
             allow_delegation=False,
             verbose=True,
@@ -32,7 +32,7 @@ class SalesContactFinderCrew:
     @agent
     def contact_finder(self) -> Agent:
         return Agent(
-            config=self.agents_config["contact_finder"],
+            config="contact_finder",
             tools=[],
             allow_delegation=False,
             verbose=True,
@@ -41,7 +41,7 @@ class SalesContactFinderCrew:
     @agent
     def sales_strategist(self) -> Agent:
         return Agent(
-            config=self.agents_config["sales_strategist"],
+            config="sales_strategist",
             tools=[],
             allow_delegation=False,
             verbose=True,
