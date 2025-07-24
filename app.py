@@ -1,3 +1,7 @@
+import os
+print("Working dir:", os.getcwd())
+print("Files:", os.listdir("config"))
+
 import streamlit as st
 from sales_contact_finder.crew import SalesContactFinderCrew
 import os
