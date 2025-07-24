@@ -3,13 +3,13 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 
+@CrewBase(
+    agents_config_path="config/agents.yaml",
+    tasks_config_path="config/tasks.yaml"
+)
 
 @CrewBase
 class SalesContactFinderCrew:
-    """SalesContactFinder crew"""
-
-    agents_config = "config/agents.yaml"
-    tasks_config = "config/tasks.yaml"
 
     @agent
     def company_researcher(self) -> Agent:
